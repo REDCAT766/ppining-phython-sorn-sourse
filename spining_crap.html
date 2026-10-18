@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spingingphython</title>
+    <style>
+        /* Base Page Setup */
+        body {
+            background-color: black;
+            margin: 50px 20px;
+            font-family: sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Image Styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Subtext Styling */
+        pre {
+            font-family: inherit;
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 30px;
+            white-space: pre-wrap;
+        }
+
+        /* Rainbow Animated Download Button */
+        .download-btn {
+            font-weight: bold;
+            font-size: 24px;
+            text-decoration: none;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow 4s linear infinite;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        @keyframes rainbow { 
+            0% { filter: hue-rotate(0deg); } 
+            100% { filter: hue-rotate(360deg); } 
+        }
+
+        /* Social/Source Links Section */
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 8px 16px;
+            border: 1px solid #333;
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .discord-link { color: #5865F2; }
+        .github-link { color: #af9ef1; }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: currentColor;
+            box-shadow: 0 0 10px currentColor;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Embedded Image Asset -->
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc//AABEIAJQAlAMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABQYEBwECAwj/xABCEAABBAECAwQGBwUFCQAAAAABAAIDBAUGEQcSIRMxQVEUMmFxkdEVIkJygaGxM1KCg8EkNJKTwhYjJURFVGJzov/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDeKIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIur3tY3mc4NA8SdlDXtXaeoEi3maMTh3tdM3dBNoqXLxT0dG7lOYid7WNJCzKHEHSl9/LBmqod5SPDf1QWhF5wTRTsEkMjJGEbhzTuCvRAREQEREBF5zTRQML5pGRsA3LnnYBVXL8SdJ4kkWMxBI8d7YD2h/JBbkWp7/HfT8BIp0blnr37Bo/NYMHHyg6wxsuHsMhJ+s4PBIHnsg3Mij8FmaGex0d/GWGzV5B0IPUHyI8CpBAREQFA6xztnA4s2KWMs5Cy93JHFA3fr5nyCnkQaSsaT4i62d2+byLMXVd1bWa4jp7h4+9ZlXgNjNg67l7csnjs0ALcOyINUHgTp7l2Fy5v57hReS4B1iwnF5iVsng2Zg2/Lqt1og+cn6a4j6El7TFTWLFZp3/s7jIx3vYsmLjDrKqOxu4hkkvd1hcw/DZfQa6GEEncxRk+fKEFD4V2NTZdl7N6lc+JlktFasW8oY0b9QPDvWwFwANgAB7Fygws1e+jMTbvFod6PE6TYnv2C0nkeN2VyUMNXTuJ5br2jnc4c/1vHlaPD3res8MViF8M7GvieC1zXDcEHwWHjsJi8Y3ahQrwD/wYAg0THofiJrJ4nzV2WtC/qBYkIA/gCsGM4CUWgOyeWmkf4tiaAPieq3MiDWTOCGlA3Z3pbj59sQo3O8CsVNWJwlyatYHcJTztd71t9EHzvpE57hbqqOtnGSNxFp/Zvkad4tz3OHkV9DscHNDmndpG4IWNkcfUydV9W/XjngeNnMkG4K94YmQQsiibysY0NaPIDoEHdERAREQRuczdDB1BZyMpY1x5WBrC5z3eQA6kqsjU+qMm4/Qml3xwO9SzfnEe/t5QCVkZjHawuWJn1MhjIYWOJrtdVL3jy679CoWrFnr/AGkE+sp6l+MHmqejMYdx5b77j2hBMsZr9w3dJhWHyAcV27PXn/cYf/ A5aCucSNcU7c9aTOWGvieWEOjYCNj91e+K4kaut5CCvb1O+rDI7Z0742EMHmeiDexi13t/ecP/AJblJ6bvZayLNfOUmQWa7+USxO3jmB+035Ki6IGp87p2TK5DVtivH2r2skMMYa5gOwd1HipfAu1Y11e9DkW5XHSzFjmTRCN/Z93O0j9EF/RcBcoMbJWXU6Fiy2F0zooy4RsHV5HgFU6s+vrkDLPYYmo2QczYJHOc5g8iQO9S2o5NQyT16eAZDC14Lprkw5hGPIN3G5VexNLUeUryPbq57JonOZLCKrQ5jh4IJHl15+/hv/r5LkjXgHT6GP8AE/5LQ2Q4l65p3Zq0uZlY+F5YQYmA9D7l7YbiRq6/fZXs6oFONwJM0sbeUbDfyQbslzetMf8 3rTxV66wes+nb67efK4D9VJ4PWGOy1r0JzLFO/t1rWoixx279j3H8CqBom/qnMYGXMZPVwqQtmdHGZK7S2QD70FEPFvSsewsz2q5PhLVkH_7o5Wj7EILyfggi58HrS+3s7Wpa9RjvWNOts78CSVSdZaQxctqhpvS7ZzmHDe3ZjlIAjPe6YjvJ8Arhd1VnM5G6rpPD2YnSfV9Pvs7OOL2gd5U/pTTdfT1Mta91i5N9azbk6vmf5koPTSenaWmMLBjKDNmxjd7/F7vElVTihqO019bSun3E5bJHlcWdTDGehcfJbDO/gqzpzSEGKyt3MXJjdyduQk2JB+zZ4Mb5BBL6fxkeGw1PHRdW14gzfzO3U/FSCIgIiICIiAiIgIiIOF5TVoJ/20Mcn32A/qvZEGGMTjQdxj6gPsgb8l2ONoEbGlWPvhb8llIgwTh8WTucbT/yG/Je8NKrB+wrQx/cjA/Re6IONlyiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiD/9k=" alt="Python Visual">
+
+    <!-- Information Window -->
+    <pre>hi fat bitch are you where to download my shitty ass app</pre>
+
+    <!-- Download Link Container -->
+    <a href="spiningphython.exe" download="spiningphython.exe" class="download-btn">
+        Download SpiningPhython
+    </a>
+
+    <!-- Socials and Source Links -->
+    <div class="nav-links">
+        <a href="https://discord.gg" target="_blank" class="discord-link">Discord</a>
+        <a href="https://github.com/REDCAT766/ppining-phython-sorn-sourse/tree/main" target="_blank" class="github-link">GitHub (Open Source)</a>
+    </div>
+
+</body>
+</html>
